@@ -37,6 +37,8 @@ namespace GiftApi
                                                        .GetChildren()
                                                        .ToDictionary(k => k.Key, v => v.Value));
 
+            redirects.Add("", "");
+
             services.AddSingleton(redirects);
         }
 
@@ -47,7 +49,7 @@ namespace GiftApi
 
             app.UseDeveloperExceptionPage();
 
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
