@@ -10,6 +10,8 @@ namespace GiftApi.DataAccess
     {
         public DbSet<StatisticModel> Records { get; set; }
 
+        public DbSet<FeedbackModel> Feedbacks { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=wwwroot\\statistics.db");
